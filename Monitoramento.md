@@ -19,14 +19,14 @@ Lake: Serve como ponto central de governança e visualização do estado dos dad
 segurança e conformidade, e de onde você pode monitorar a qualidade dos dados em todas as zonas e ativos.
 ```
 ```
-Zone: Ajuda a segmentar dados com base no estado de processamento ou tipo de dados, permitindo que as verificações de qualidade
-sejam aplicadas de forma diferente em dados brutos e dados processados. Isso melhora o controle sobre os diferentes tipos de
-dados que a suaorganização lida.
+Zone: Ajuda a segmentar dados com base no estado de processamento ou tipo de dados, permitindo que as verificações de
+qualidade sejam aplicadas de forma diferente em dados brutos e dados processados. Isso melhora o controle sobre os
+diferentes tipos de dados que a suaorganização lida.
 ```
 ```
-Asset: Nível mais granular de monitoramento. É onde você configura e aplica as regras de qualidade de dados, como validações de
-esquema,detecção de valores nulos ou checagem de duplicidade. A execução de jobs para verificar a integridade dos dados ocorre
-neste nível.
+Asset: Nível mais granular de monitoramento. É onde você configura e aplica as regras de qualidade de dados, como validações
+de esquema,detecção de valores nulos ou checagem de duplicidade. A execução de jobs para verificar a integridade dos dados
+ocorre neste nível.
 ```
 
 ## Qualidade de Dados
