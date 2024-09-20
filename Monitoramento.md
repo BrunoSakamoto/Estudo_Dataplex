@@ -25,7 +25,7 @@ diferentes tipos de dados que a suaorganização lida.
 ```
 ```
 Asset: Nível mais granular de monitoramento. É onde você configura e aplica as regras de qualidade de dados, como validações
-de esquema,detecção de valores nulos ou checagem de duplicidade. A execução de jobs para verificar a integridade dos dados
+de esquema, detecção de valores nulos ou checagem de duplicidade. A execução de jobs para verificar a integridade dos dados
 ocorre neste nível.
 ```
 
@@ -50,3 +50,23 @@ Quando as regras de qualidade são violadas, o Dataplex pode emitir alertas e no
 
 ## Acompanhamento de Histórico de Qualidade
 O Dataplex mantém um histórico das execuções das verificações de qualidade e suas falhas, permitindo que você visualize a evolução da qualidade dos dados ao longo do tempo. Isso é especialmente útil para auditorias e conformidade, ajudando a detectar e corrigir problemas sistemáticos.
+
+## Componenentes da Qualidade de Dados no Dataplex
+1. Regras de Qualidade de Dados: Essas regras são o núcleo das verificações de qualidade que o Dataplex realiza nos dados.
+- Validação de Schema: Verificar se os dados têm o tipo de dados correto (ex.: string, inteiro) e se as colunas esperadas estão presentes.
+- Checagem de Valores Nulos: Garantir que colunas essenciais não tenham valores nulos.
+- Validação de Intervalo de Valores: Por exemplo, verificar se os valores numéricos estão dentro de um intervalo esperado (ex.: datas de nascimento não podem ser no futuro).
+- Validar Unicidade: Garantir que certos campos, como identificadores únicos, não estejam duplicados.
+
+2. Perfil de Dados Um Perfil de Dados é uma coleta automatizada de metadados e estatísticas sobre um ativo específico, como:
+- Contagem de registros.
+- Distribuição de valores.
+- Percentual de valores nulos.
+- Tendências de crescimento ou redução de dados.
+- Detecção de outliers.
+
+3. Monitoramento de Qualidade Automático: O Dataplex pode agendar verificações automáticas de qualidade, rodando jobs que verificam as regras configuradas em horários específicos (ex.: diariamente, semanalmente) ou após um evento (como a inserção de novos dados).
+
+4. Integração com Notificações: Ao detectar uma falha de qualidade, o Dataplex pode ser configurado para enviar notificações via Pub/Sub, permitindo que o alerta seja enviado para ferramentas de monitoramento externas ou sistemas de notificação como o Google Cloud Monitoring, Slack, ou até emails.
+
+5. Dashboards de Monitoramento: O Dataplex oferece visualizações que mostram o estado geral da qualidade dos dados, facilitando a inspeção rápida de anomalias e falhas detectadas. Isso permite que os responsáveis tomem decisões informadas sobre os dados que estão sendo monitorados.
