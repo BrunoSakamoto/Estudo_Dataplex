@@ -70,3 +70,142 @@ O Dataplex mantém um histórico das execuções das verificações de qualidade
 4. Integração com Notificações: Ao detectar uma falha de qualidade, o Dataplex pode ser configurado para enviar notificações via Pub/Sub, permitindo que o alerta seja enviado para ferramentas de monitoramento externas ou sistemas de notificação como o Google Cloud Monitoring, Slack, ou até emails.
 
 5. Dashboards de Monitoramento: O Dataplex oferece visualizações que mostram o estado geral da qualidade dos dados, facilitando a inspeção rápida de anomalias e falhas detectadas. Isso permite que os responsáveis tomem decisões informadas sobre os dados que estão sendo monitorados.
+
+# Passo a Passo para a criação do Monitoramento
+
+## Passo 1: Configurar o Ambiente
+```
+Acesso ao Google Cloud:
+Certifique-se de que você tenha permissões adequadas no projeto do Google Cloud para criar recursos do Dataplex (como Lakes,
+Zones, Assets) e configurar permissões de IAM (Identity and Access Management).
+Cloud Pub/Sub API (para alertas).
+```
+
+Navegar para o Dataplex:
+
+No Google Cloud Console, acesse a página do Dataplex.
+```
+Criar um Lake:
+
+Clique em Criar Lake.
+Dê um nome ao lake, como meu_lake_financeiro, e defina uma região apropriada onde os dados estão armazenados.
+Selecione um bucket do Google Cloud Storage ou crie um novo bucket para armazenar metadados e logs do Dataplex.
+Configurações de Governança e Segurança:
+
+Defina permissões de IAM no nível do Lake, atribuindo acesso de acordo com as políticas de governança de sua organização.
+Criar o Lake:
+
+Após configurar as opções, clique em Criar para criar o lake.
+```
+
+## Passo 3: Criar Zones dentro do Lake
+```
+Adicionar Zone ao Lake:
+Acesse o Lake que você acabou de criar e clique em Adicionar Zone.
+Escolher o Tipo de Zone:
+```
+Selecione o tipo de zone que você deseja criar:
+
+```
+Raw Zone: para dados brutos, logo após a ingestão.
+Curated Zone: para dados já processados e prontos para uso.
+Sandbox Zone: para experimentos e desenvolvimento.
+```
+Configurar a Zone:
+```
+Defina um nome para a zone, como zona_dados_brutos ou zona_dados_curados.
+Escolha o bucket do GCS ou o dataset do BigQuery que vai ser associado a essa zone.
+```
+Permissões de Acesso:
+
+Configure permissões para a zone, conforme necessário para o controle de acesso aos dados.
+Criar a Zone:
+
+Clique em Criar para finalizar a criação da zone.
+
+## Passo 4: Criar Assets dentro da Zone
+Adicionar um Asset:
+
+Dentro da Zone, clique em Adicionar Asset.
+Escolher o Tipo de Asset:
+
+Selecione o tipo de asset que você deseja monitorar:
+```
+Google Cloud Storage: para conjuntos de dados armazenados como arquivos (ex.: CSV, JSON, Parquet).
+BigQuery: para datasets e tabelas no BigQuery.
+```
+Configurar o Asset:
+```
+Nomeie o asset, como transacoes_2023, e defina o local exato do asset:
+Para assets do GCS, insira o caminho do bucket e a pasta.
+Para assets do BigQuery, escolha o dataset e as tabelas que serão monitoradas.
+```
+Criar o Asset:
+
+Após revisar a configuração, clique em Criar.
+## Passo 5: Configurar Regras de Qualidade de Dados
+Adicionar Regras de Qualidade de Dados:
+```
+No Dataplex, vá até o Asset que você acabou de criar.
+No menu lateral, selecione Qualidade de Dados e clique em Adicionar Regra de Qualidade.
+```
+Escolher Tipo de Regra de Qualidade:
+
+Selecione as regras que deseja aplicar aos seus dados, como:
+```
+Validação de esquema: verificar se as colunas e tipos de dados estão corretos.
+Valores nulos: verificar se colunas obrigatórias têm valores nulos.
+Intervalos de valores: validar se os valores de uma coluna numérica estão dentro de um intervalo específico.
+Unicidade: garantir que os valores em uma coluna (ex.: IDs) sejam únicos.
+```
+Configurar a Regra:
+
+Defina os parâmetros de cada regra. Por exemplo, se estiver monitorando uma tabela de transações, você pode configurar uma regra para validar que o valor da transação nunca seja negativo.
+Agendar a Verificação:
+
+Configure o agendamento para executar verificações de qualidade periodicamente (diário, semanal, etc.).
+Salve as configurações e ative a regra.
+## Passo 6: Configurar Perfis de Dados
+Configurar Perfis de Dados:
+```
+No mesmo Asset, acesse a aba de Perfis de Dados.
+Ative o perfil de dados para gerar estatísticas sobre os dados, como contagem de registros, distribuição de valores, e presença de
+outliers.
+```
+Definir Frequência de Atualização:
+```
+Defina a frequência com que o perfil de dados deve ser atualizado (diariamente, semanalmente, etc.).
+Salvar Configuração:
+```
+Clique em Salvar para ativar o perfil de dados.
+## Passo 7: Configurar Alertas via Pub/Sub
+Criar um Tópico no Pub/Sub:
+
+No Google Cloud Console, vá até a seção de Pub/Sub.
+Crie um novo tópico, como alertas_qualidade_dados, para receber as notificações.
+Configurar Notificação no Dataplex:
+```
+Retorne ao Dataplex e navegue até a aba de Configurações de Notificações no nível do asset ou lake.
+Adicione uma notificação que envie alertas ao tópico do Pub/Sub criado anteriormente, sempre que uma regra de qualidade for
+violada.
+```
+Configurar Assinaturas:
+
+No Pub/Sub, crie uma assinatura para o tópico.
+Defina como deseja receber os alertas:
+```
+Por email.
+Enviar alertas para sistemas de terceiros (como Slack, PagerDuty).
+Usar ferramentas como Cloud Monitoring para visualizar os alertas em um painel de controle.
+```
+## Passo 8: Monitoramento e Resolução de Falhas
+Monitorar o Status da Qualidade dos Dados:
+```
+No Dataplex, acesse o painel de controle da qualidade de dados.
+Verifique os relatórios gerados pelas regras de qualidade configuradas e analise possíveis problemas (por exemplo, falhas
+em validações de esquema ou presença de valores nulos inesperados).
+```
+Receber Alertas e Tomar Ações:
+
+Sempre que uma regra de qualidade falhar, você receberá uma notificação via Pub/Sub, que pode ser visualizada no sistema de notificação configurado.
+A partir desse ponto, a equipe pode investigar a causa do problema e, se necessário, corrigir os dados ou ajustar as regras de qualidade.
