@@ -169,8 +169,8 @@ Salve as configurações e ative a regra.
 Configurar Perfis de Dados:
 ```
 No mesmo Asset, acesse a aba de Perfis de Dados.
-Ative o perfil de dados para gerar estatísticas sobre os dados, como contagem de registros, distribuição de valores, e presença de
-outliers.
+Ative o perfil de dados para gerar estatísticas sobre os dados, como contagem de registros, distribuição de valores, e
+presença de outliers.
 ```
 Definir Frequência de Atualização:
 ```
