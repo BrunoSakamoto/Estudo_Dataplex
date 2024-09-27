@@ -74,8 +74,8 @@ O Dataplex mantém um histórico das execuções das verificações de qualidade
 # Passo a Passo para a criação do Monitoramento
 
 ## Passo 1: Configurar o Ambiente
-```
 Acesso ao Google Cloud:
+```
 Certifique-se de que você tenha permissões adequadas no projeto do Google Cloud para criar recursos do Dataplex (como Lakes,
 Zones, Assets) e configurar permissões de IAM (Identity and Access Management).
 Cloud Pub/Sub API (para alertas).
