@@ -146,8 +146,7 @@ Após revisar a configuração, clique em Criar.
 ## Passo 5: Configurar Regras de Qualidade de Dados
 Adicionar Regras de Qualidade de Dados:
 ```
-No Dataplex, vá até o Asset que você acabou de criar.
-No menu lateral, selecione Qualidade de Dados e clique em Adicionar Regra de Qualidade.
+No Dataplex, no menu lateral, selecione Qualidade de Dados e clique em Adicionar Regra de Qualidade.
 ```
 Escolher Tipo de Regra de Qualidade:
 
@@ -179,7 +178,9 @@ Salvar Configuração:
 ```
 Clique em Salvar para ativar o perfil de dados.
 ## Passo 7: Configurar Alertas via Monitoramento
+```
 
+```
 ## Passo 8: Monitoramento e Resolução de Falhas
 Monitorar o Status da Qualidade dos Dados:
 ```
@@ -189,5 +190,5 @@ em validações de esquema ou presença de valores nulos inesperados).
 ```
 Receber Alertas e Tomar Ações:
 
-Sempre que uma regra de qualidade falhar, você receberá uma notificação via Pub/Sub, que pode ser visualizada no sistema de notificação configurado.
+Sempre que uma regra de qualidade falhar, você receberá uma notificação via Monitoramento, que pode ser visualizada no sistema de notificação configurado.
 A partir desse ponto, a equipe pode investigar a causa do problema e, se necessário, corrigir os dados ou ajustar as regras de qualidade.
