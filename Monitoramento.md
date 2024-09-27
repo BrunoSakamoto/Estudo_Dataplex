@@ -178,26 +178,8 @@ Defina a frequência com que o perfil de dados deve ser atualizado (diariamente,
 Salvar Configuração:
 ```
 Clique em Salvar para ativar o perfil de dados.
-## Passo 7: Configurar Alertas via Pub/Sub
-Criar um Tópico no Pub/Sub:
+## Passo 7: Configurar Alertas via Monitoramento
 
-No Google Cloud Console, vá até a seção de Pub/Sub.
-Crie um novo tópico, como alertas_qualidade_dados, para receber as notificações.
-Configurar Notificação no Dataplex:
-```
-Retorne ao Dataplex e navegue até a aba de Configurações de Notificações no nível do asset ou lake.
-Adicione uma notificação que envie alertas ao tópico do Pub/Sub criado anteriormente, sempre que uma regra de qualidade for
-violada.
-```
-Configurar Assinaturas:
-
-No Pub/Sub, crie uma assinatura para o tópico.
-Defina como deseja receber os alertas:
-```
-Por email.
-Enviar alertas para sistemas de terceiros (como Slack, PagerDuty).
-Usar ferramentas como Cloud Monitoring para visualizar os alertas em um painel de controle.
-```
 ## Passo 8: Monitoramento e Resolução de Falhas
 Monitorar o Status da Qualidade dos Dados:
 ```
