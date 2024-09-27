@@ -188,7 +188,3 @@ No Dataplex, acesse o painel de controle da qualidade de dados.
 Verifique os relatórios gerados pelas regras de qualidade configuradas e analise possíveis problemas (por exemplo, falhas
 em validações de esquema ou presença de valores nulos inesperados).
 ```
-Receber Alertas e Tomar Ações:
-
-Sempre que uma regra de qualidade falhar, você receberá uma notificação via Monitoramento, que pode ser visualizada no sistema de notificação configurado.
-A partir desse ponto, a equipe pode investigar a causa do problema e, se necessário, corrigir os dados ou ajustar as regras de qualidade.
