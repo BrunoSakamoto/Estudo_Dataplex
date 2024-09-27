@@ -52,13 +52,13 @@ Quando as regras de qualidade são violadas, o Dataplex pode emitir alertas e no
 O Dataplex mantém um histórico das execuções das verificações de qualidade e suas falhas, permitindo que você visualize a evolução da qualidade dos dados ao longo do tempo. Isso é especialmente útil para auditorias e conformidade, ajudando a detectar e corrigir problemas sistemáticos.
 
 ## Componenentes da Qualidade de Dados no Dataplex
-1. Regras de Qualidade de Dados: Essas regras são o núcleo das verificações de qualidade que o Dataplex realiza nos dados.
+1. **Regras de Qualidade de Dados**: Essas regras são o núcleo das verificações de qualidade que o Dataplex realiza nos dados.
 - Validação de Schema: Verificar se os dados têm o tipo de dados correto (ex.: string, inteiro) e se as colunas esperadas estão presentes.
 - Checagem de Valores Nulos: Garantir que colunas essenciais não tenham valores nulos.
 - Validação de Intervalo de Valores: Por exemplo, verificar se os valores numéricos estão dentro de um intervalo esperado (ex.: datas de nascimento não podem ser no futuro).
 - Validar Unicidade: Garantir que certos campos, como identificadores únicos, não estejam duplicados.
 
-2. Perfil de Dados Um Perfil de Dados é uma coleta automatizada de metadados e estatísticas sobre um ativo específico, como:
+2. **Perfil de Dados**: Um Perfil de Dados é uma coleta automatizada de metadados e estatísticas sobre um ativo específico, como:
 - Contagem de registros.
 - Distribuição de valores.
 - Percentual de valores nulos.
