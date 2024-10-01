@@ -1,16 +1,28 @@
 # Monitoramento de Dados
 Com o essa função, é possível criar um processo de monitoramento automatizado dos datasets armazenados no GCS e no BigQuery, usando o Dataplex para governança e qualidade de dados. 
 
-## Lakes
-Ao criar um Lake você centraliza uma governança de dados dentro de área gerenciada (incluindo políticas de segurança e conformidade de dados)
+### Lakes
+```
+Ao criar um Lake você centraliza uma governança de dados dentro de área gerenciada (incluindo políticas de segurança e conformidade
+de dados).
+```
 
-## Zones
-As zones são as subdivisões de um Lake organizadas para gerenciar e categorizar os dados com base no seu propósito ou estado de processamento. 
+### Zones
+```
+As zones são as subdivisões de um Lake organizadas para gerenciar e categorizar os dados com base no seu propósito ou estado de
+processamento. 
 
-Um Lake pode ter uma zona bruta que armazena logs de servidor recém-coletados, e uma zona curada que contém os mesmos logs, mas transformados e filtrados para incluir apenas as informações relevantes para análises de uso. A zona curada teria regras de qualidade de dados mais rígidas, enquanto a zona bruta pode ser monitorada para verificar apenas a integridade dos dados brutos.
+Um Lake pode ter uma zona bruta que armazena logs de servidor recém-coletados, e uma zona curada que contém os mesmos logs, mas
+transformados e filtrados para incluir apenas as informações relevantes para análises de uso. A zona curada teria regras de
+qualidade de dados mais rígidas, enquanto a zona bruta pode ser monitorada para verificar apenas a integridade dos dados brutos.
+```
 
 ### Assets
-Os Assets são os datasets contidos dentro de uma zona. Eles representam conjuntos de dados individuais, como arquivos no Google Cloud Storage ou tabelas no BigQuery. A função dos Assets é permitir o gerenciamento granular e a aplicação de regras de qualidade, segurança e governança em conjuntos de dados específicos.
+```
+Os Assets são os datasets contidos dentro de uma zona. Eles representam conjuntos de dados individuais, como arquivos no Google
+Cloud Storage ou tabelas no BigQuery. A função dos Assets é permitir o gerenciamento granular e a aplicação de regras de
+qualidade, segurança e governança em conjuntos de dados específicos.
+```
 
 ## Função de cada um no Monitoramento
 
