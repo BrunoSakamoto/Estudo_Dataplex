@@ -76,7 +76,7 @@ Marque as caixas para escolher as regras que você quer editar e clique em Selec
 |RangeExpectation(Verificação de intervalo)|Verifique se o valor está entre o mínimo e o máximo|Todas as colunas do tipo numérico, de data e de carimbo de data/hora|
 |StatisticRangeExpectation(Verificação de estatística)|Verifique se a medida estatística fornecida corresponde à expectativa do intervalo|Todos os tipos de colunas numéricas aceitos|
 
-### Regra de verificação de linha do SQL
+### Regra de verificação de linha do SQL (Incompleto)
 Criar uma regra SQL personalizada para aplicar a cada linha (SQL personalizado) regra de verificação de linha). 
 
   a. Em Dimensão, escolha uma dimensão.
@@ -89,7 +89,7 @@ Criar uma regra SQL personalizada para aplicar a cada linha (SQL personalizado) 
 
   e. Clique em Adicionar.
 
-### Regra de verificação agregada do SQL 
+### Regra de verificação agregada do SQL (Incompleto)
 Criar um SQL personalizado regra de condição de tabela.
 
   a. Em Dimensão, escolha uma dimensão.
@@ -100,7 +100,7 @@ Criar um SQL personalizado regra de condição de tabela.
 
   d. Clique em Adicionar.
 
-### Regra de declaração SQL
+### Regra de declaração SQL (Incompleto)
 Criar uma regra de declaração SQL personalizada para verificar para um estado inválido dos dados.
 
   a. Em Dimensão, escolha uma dimensão.
