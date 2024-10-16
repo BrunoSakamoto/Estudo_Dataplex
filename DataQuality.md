@@ -113,3 +113,21 @@ Criar uma regra de declaração SQL personalizada para verificar para um estado 
 <img width="449" alt="passo6" src="https://github.com/user-attachments/assets/ee27c8d1-cbe3-4665-bf69-23bbc6e6c8c5">
 
 7. Clique em criar.
+
+## Como ver o histórrco de resultados das verificações
+
+1. No console do Google Cloud, acesse a página Qualidade de dados.
+
+2. Clique no nome de uma verificação.
+
+3. Clique na guia Histórico de jobs.
+<img width="723" alt="historico" src="https://github.com/user-attachments/assets/9cd708c9-4c36-47c7-88d7-3334a705056a">
+
+A guia Histórico de jobs fornece informações sobre jobs anteriores. Ele lista todos os jobs, o número de registros verificados em cada job, o status do job, o horário em que o job foi executado, se cada regra foi aprovada ou falhou e muito mais.
+
+4. Clique no ID do Job
+<img width="794" alt="idhistorico" src="https://github.com/user-attachments/assets/d73bdc01-3117-4a9c-a957-9e9803a82ec9">
+
+- Aqui você terá acesso aos detalhes do Job
+
+<img width="743" alt="detalheshisotirco" src="https://github.com/user-attachments/assets/28991107-95ad-4def-a8a4-f038b6b69691">
