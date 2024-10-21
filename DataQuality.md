@@ -44,11 +44,11 @@ Clique em Continuar.
 ### Recomendações com base no perfil 
 Crie regras na com base em uma verificação de criação de perfil de dados atual.
 
-***Escolher colunas***: selecione as colunas para receber regras recomendadas.
+- ***Escolher colunas***: selecione as colunas para receber regras recomendadas.
 
-***Verificar projeto***: recomendações com base em dados atuais a verificação de criação de perfil. Por padrão, o Dataplex seleciona a criação de perfil do mesmo projeto em que você está criando os dados verificação de qualidade. Se você criou a verificação em um projeto diferente, especifique o projeto para extrair as verificações de perfil.
+- ***Verificar projeto***: recomendações com base em dados atuais a verificação de criação de perfil. Por padrão, o Dataplex seleciona a criação de perfil do mesmo projeto em que você está criando os dados verificação de qualidade. Se você criou a verificação em um projeto diferente, especifique o projeto para extrair as verificações de perfil.
 
-***Escolha os resultados do perfil***: com base nas colunas e no projeto que você selecionar, vários resultados de perfil serão exibidos.
+- ***Escolha os resultados do perfil***: com base nas colunas e no projeto que você selecionar, vários resultados de perfil serão exibidos.
 
 Selecione um ou mais resultados de perfil e clique em OK. Isso preenche uma lista de regras para seleção.
 
@@ -59,9 +59,9 @@ Para selecionar as regras que você quer editar, marque as caixas e clique em Se
 ### Tipos de regra integrados 
 Crie regras com base em regras predefinidas. Veja a lista de regras predefinidas.
 
-***Escolher colunas***: selecione as colunas para as quais as regras serão aplicadas.
+- ***Escolher colunas***: selecione as colunas para as quais as regras serão aplicadas.
 
-***Escolha os tipos de regras***: com base nas colunas selecionadas, vários tipos de regras aparecem para seleção.
+- ***Escolha os tipos de regras***: com base nas colunas selecionadas, vários tipos de regras aparecem para seleção.
 
 Selecione um ou mais tipos de regra e clique em OK. Isso preenche uma lista de regras para seleção.
 
@@ -76,7 +76,7 @@ Marque as caixas para escolher as regras que você quer editar e clique em Selec
 |RangeExpectation(Verificação de intervalo)|Verifique se o valor está entre o mínimo e o máximo|Todas as colunas do tipo numérico, de data e de carimbo de data/hora|
 |StatisticRangeExpectation(Verificação de estatística)|Verifique se a medida estatística fornecida corresponde à expectativa do intervalo|Todos os tipos de colunas numéricas aceitos|
 
-### Regra de verificação de linha do SQL (Incompleto)
+### Regra de verificação de linha do SQL
 Criar uma regra SQL personalizada para aplicar a cada linha (SQL personalizado) regra de verificação de linha). 
 
   a. Em Dimensão, escolha uma dimensão.
@@ -89,7 +89,7 @@ Criar uma regra SQL personalizada para aplicar a cada linha (SQL personalizado) 
 
   e. Clique em Adicionar.
 
-### Regra de verificação agregada do SQL (Incompleto)
+### Regra de verificação agregada do SQL 
 Criar um SQL personalizado regra de condição de tabela.
 
   a. Em Dimensão, escolha uma dimensão.
@@ -100,7 +100,7 @@ Criar um SQL personalizado regra de condição de tabela.
 
   d. Clique em Adicionar.
 
-### Regra de declaração SQL (Incompleto)
+### Regra de declaração SQL 
 Criar uma regra de declaração SQL personalizada para verificar para um estado inválido dos dados.
 
   a. Em Dimensão, escolha uma dimensão.
